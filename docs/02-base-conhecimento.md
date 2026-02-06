@@ -9,6 +9,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 | `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
 | `perfil_investidor.json` | JSON | Personalizar recomendações |
 | `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
+| `dividas.csv` | CSV | Listar dívidas, taxas de juros e vencimentos para priorização |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
 
 > [!TIP]
@@ -47,6 +48,10 @@ Dados do Cliente:
 - Nome: João Silva
 - Perfil: Moderado
 - Saldo disponível: R$ 5.000
+
+Dívidas em aberto:
+- Cartão de Crédito: R$ 2.000 (Juros: 12% a.m.)
+- Empréstimo Pessoal: R$ 5.000 (Juros: 3% a.m.)
 
 Últimas transações:
 - 01/11: Supermercado - R$ 450
