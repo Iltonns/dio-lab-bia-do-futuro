@@ -73,10 +73,10 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] Só usa dados fornecidos pelo cliente
-- [ ] Não recomenda investimentos específicos
-- [ ] admite quando não sabe algo
-- [ ] Foca apenas em educar, não em aconselhar
+- [x] Só usa dados fornecidos pelo cliente
+- [x] Não recomenda investimentos específicos
+- [x] admite quando não sabe algo
+- [x] Foca apenas em educar, não em aconselhar
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
