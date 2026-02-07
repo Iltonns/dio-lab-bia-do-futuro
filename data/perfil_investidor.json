@@ -1,22 +1,57 @@
 {
-  "nome": "João Silva",
+  "nome": "Eleilton Santos",
   "idade": 32,
-  "profissao": "Analista de Sistemas",
+  "profissao": "Analista de dados",
   "renda_mensal": 5000.00,
   "perfil_investidor": "moderado",
-  "objetivo_principal": "Construir reserva de emergência",
-  "patrimonio_total": 15000.00,
-  "reserva_emergencia_atual": 10000.00,
+  "objetivo_principal": "Sair das dívidas e organizar o orçamento",
+  "patrimonio_total": 2000.00,
+  "reserva_emergencia_atual": 0.00,
   "aceita_risco": false,
   "metas": [
     {
-      "meta": "Completar reserva de emergência",
-      "valor_necessario": 15000.00,
-      "prazo": "2026-06"
+      "meta": "Quitar dívida do cartão",
+      "valor_necessario": 1000.00,
+      "prazo": "2026-03"
     },
     {
-      "meta": "Entrada do apartamento",
-      "valor_necessario": 50000.00,
+      "meta": "Pagar faculdade universitária",
+      "valor_necessario": 1600.00,
+      "prazo": "2026-12"
+    },
+    {
+      "meta": "Quitar parcela de financiamento de veículo",
+      "valor_necessario": 2250.00,
+      "prazo": "2026-02"
+    },
+    {
+      "meta": "Organizar orçamento mensal",
+      "valor_necessario": 5000.00,
+      "prazo": "2026-02"
+    },
+    {
+      "meta": "Viagem",
+      "valor_necessario": 1000.00,
+      "prazo": "2026-02"
+    },
+    {
+      "meta": "Pagar internet móvel e residencial",
+      "valor_necessario": 350.00,
+      "prazo": "2026-02"
+    },
+    {
+      "meta": "Pagar aluguel do imóvel",
+      "valor_necessario": 2000.00,
+      "prazo": "2026-02"
+    },
+    {
+      "meta": "Criar reserva de emergência",
+      "valor_necessario": 10000.00,
+      "prazo": "2027-12"
+    },
+    {
+      "meta": "Empréstimo pessoal",
+      "valor_necessario": 5000.00,
       "prazo": "2027-12"
     }
   ]

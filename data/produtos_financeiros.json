@@ -5,7 +5,8 @@
     "risco": "baixo",
     "rentabilidade": "100% da Selic",
     "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "indicado_para": "Reserva de emergência e iniciantes",
+    "explicacao_simples": "É como emprestar dinheiro para o governo. É o investimento mais seguro do Brasil e você pode tirar o dinheiro quando quiser."
   },
   {
     "nome": "CDB Liquidez Diária",
@@ -13,7 +14,8 @@
     "risco": "baixo",
     "rentabilidade": "102% do CDI",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "indicado_para": "Quem busca segurança com rendimento diário",
+    "explicacao_simples": "É como emprestar dinheiro para o banco. O banco te devolve com juros e você pode resgatar a qualquer momento."
   },
   {
     "nome": "LCI/LCA",
@@ -21,7 +23,8 @@
     "risco": "baixo",
     "rentabilidade": "95% do CDI",
     "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "indicado_para": "Quem pode esperar 90 dias (isento de IR)",
+    "explicacao_simples": "Empréstimo para o setor imobiliário ou agrícola. A vantagem é que você não paga Imposto de Renda sobre o lucro."
   },
   {
     "nome": "Fundo Multimercado",
@@ -29,7 +32,8 @@
     "risco": "medio",
     "rentabilidade": "CDI + 2%",
     "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "indicado_para": "Perfil moderado que busca diversificação",
+    "explicacao_simples": "Um pacote com vários tipos de investimentos misturados, gerenciado por um profissional."
   },
   {
     "nome": "Fundo de Ações",
@@ -37,6 +41,7 @@
     "risco": "alto",
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "indicado_para": "Perfil arrojado com foco no longo prazo",
+    "explicacao_simples": "Você compra pedacinhos de várias empresas. Pode render muito, mas também pode cair bastante no curto prazo."
   }
 ]

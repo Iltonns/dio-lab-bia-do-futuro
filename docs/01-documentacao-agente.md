@@ -1,5 +1,16 @@
 # Documentação do Agente
 
+[!TIP]
+**Prompt sugerido para esta etapa:**
+
+Crie um system Prompt para um agente chamado Sther, que ajudar um cliente a organizar suas finanças, sair das dívidas e encontrar equilíbrio financeiro. Use o contexto do usuário para personalizar as respostas.
+
+---
+
+## System Prompt
+
+---
+
 ## Caso de Uso
 
 ### Problema

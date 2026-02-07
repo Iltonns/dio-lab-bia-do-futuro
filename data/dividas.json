@@ -1,0 +1,45 @@
+[
+  {
+    "credor": "Cartão de Crédito Banco X",
+    "valor_total": 1000.00,
+    "taxa_juros_mensal": 12.0,
+    "vencimento": "2026-02-15"
+  },
+  {
+    "credor": "Empréstimo Pessoal",
+    "valor_total": 5000.00,
+    "taxa_juros_mensal": 3.0,
+    "vencimento": "2026-02-20"
+  },
+  {
+    "credor": "Parcela de Financiamnto de Veículo",
+    "valor_total": 2250.00,
+    "taxa_juros_mensal": 9.0,
+    "vencimento": "2026-02-21"
+  },
+  {
+    "credor": "Faculdade Universitária",
+    "valor_total": 1600.00,
+    "taxa_juros_mensal": 5.0,
+    "vencimento": "2026-01-10"
+  },
+  {
+    "credor": "Internet Movel e Residencial",
+    "valor_total": 350.00,
+    "taxa_juros_mensal": 7.0,
+    "vencimento": "2026-01-10"
+  },
+  {
+    "credor": "Aluguel do Imóvel",
+    "valor_total": 2000.00,
+    "taxa_juros_mensal": 0.0,
+    "vencimento": "2026-02-23"
+  },
+  {
+    "credor": "Viagem",
+    "valor_total": 1000.00,
+    "taxa_juros_mensal": 0.0,
+    "vencimento": "2026-01-21"
+  }
+   
+]
