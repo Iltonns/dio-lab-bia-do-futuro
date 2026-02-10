@@ -22,6 +22,14 @@ python-dotenv
 
 ## Como Rodar
 
+### 1. Configurar o Ollama
+Certifique-se de ter o [Ollama](https://ollama.com/) instalado e rodando.
+Baixe o modelo configurado no agente:
+```bash
+ollama pull llama3
+```
+
+### 2. Executar o Agente
 ```bash
 # Instalar dependências
 pip install -r requirements.txt

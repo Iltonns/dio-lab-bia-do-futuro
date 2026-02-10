@@ -2,11 +2,15 @@ import json
 import os
 import pandas as pd
 from openai import OpenAI
-from config import OPENAI_API_KEY, DATA_DIR
+from config import DATA_DIR
 
 class StherAgent:
     def __init__(self):
-        self.client = OpenAI(api_key=OPENAI_API_KEY)
+        # Configuração para rodar com Ollama localmente
+        self.client = OpenAI(
+            base_url="http://localhost:11434/v1",
+            api_key="ollama"  # O Ollama não exige chave real, mas o cliente OpenAI sim
+        )
         self.dados_cliente = self._carregar_json('perfil_investidor.json')
         self.produtos = self._carregar_json('produtos_financeiros.json')
         self.dividas = self._carregar_json('dividas.json')
@@ -90,9 +94,12 @@ Os dados abaixo representam a situação atual do usuário. Use-os para personal
         system_prompt = self._montar_system_prompt()
         messages = [{"role": "system", "content": system_prompt}] + historico_mensagens
         
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo", # Pode ser alterado para gpt-4 ou outro modelo
-            messages=messages,
-            temperature=0.7
-        )
-        return response.choices[0].message.content
+        try:
+            response = self.client.chat.completions.create(
+                model="llama3", # Certifique-se de rodar 'ollama pull llama3' no terminal antes
+                messages=messages,
+                temperature=0.7
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            return f"⚠️ **Erro Técnico:** Ocorreu um erro ao consultar o modelo.\n\n**Detalhe:** `{str(e)}`\n\n**Dica:** Verifique se o Ollama está rodando e se o modelo escolhido cabe na memória do seu PC."
