@@ -1,20 +1,21 @@
-# Exemplos e Referências
+# 📚 Exemplos e Referências
 
-Esta pasta contém exemplos de implementação para cada etapa do desafio.
+Esta pasta centraliza referências para a implementação e uso da **Sther**.
 
-## Vídeos de Referência
+## 💡 Exemplos de Interação
 
-> 🎬 Em breve serão disponibilizados vídeos demonstrando a implementação completa de cada etapa, com foco no raciocínio por trás de cada decisão.
+Para ver como a Sther interage em diferentes cenários (dívidas, investimentos, dúvidas gerais), consulte a documentação de prompts:
 
-| Etapa | Descrição | Link |
-|-------|-----------|------|
-| Documentação | Como definir o caso de uso e arquitetura | [em breve] |
-| Base de Conhecimento | Como usar os dados mockados | [em breve] |
-| Prompts | Como criar prompts eficazes | [em breve] |
-| Aplicação | Como criar o chatbot funcional | [em breve] |
-| Métricas | Como avaliar seu agente | [em breve] |
-| Pitch | Como apresentar sua solução | [em breve] |
+- [Prompts e Cenários de Teste](../docs/03-prompts.md)
 
-## Exemplo de Implementação Simples
+## 🛠️ Implementação de Referência
 
-Confira na pasta `src/` um exemplo básico de estrutura de aplicação usando Streamlit.
+O código-fonte completo da aplicação funcional está disponível na pasta `src/`. Ele demonstra:
+
+1. **Carregamento de Dados**: Como ler JSON e CSV (`agente.py`).
+2. **Engenharia de Prompt**: Como injetar contexto dinamicamente (`agente.py`).
+3. **Interface de Chat**: Estrutura básica com Streamlit (`app.py`).
+
+## 🎬 Material de Apoio
+
+> 🎬 Em breve serão disponibilizados vídeos demonstrando a implementação completa de cada etapa.
