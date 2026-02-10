@@ -1,149 +1,79 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# 🤖 Sther: Agente Financeira Inteligente com IA Generativa
 
-## Contexto
+A **Sther** é uma educadora financeira pessoal desenvolvida para transformar a forma como as pessoas lidam com suas finanças. Diferente de chatbots tradicionais, ela utiliza IA Generativa para oferecer um atendimento empático, didático e focado na resolução de dívidas e organização do orçamento.
 
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
+## 🎯 Caso de Uso
 
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
+Muitas pessoas enfrentam ansiedade financeira e paralisia por não saberem como organizar suas contas. A Sther resolve esse problema ao:
 
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+* **Analisar dados reais**: Processa históricos de transações, perfis de investidor e listas de dívidas.
+* **Educar sem julgamento**: Explica estratégias como o método "Bola de Neve" e quitação por maiores juros.
+* **Propor ações práticas**: Transforma números complexos em pequenos passos executáveis para o usuário.
 
----
+## 🛠️ Tecnologias Utilizadas
 
-## O Que Você Deve Entregar
+* **Interface**: [Streamlit](https://streamlit.io/) para uma experiência de chat interativa.
+* **Orquestração de IA**: [OpenAI Python SDK](https://github.com/openai/openai-python) conectado ao [Ollama](https://ollama.com/).
+* **Modelo de Linguagem**: **Llama3** rodando localmente, garantindo privacidade de dados.
+* **Processamento de Dados**: [Pandas](https://pandas.pydata.org/) para análise de fluxos financeiros em CSV.
 
-### 1. Documentação do Agente
+## 🏗️ Arquitetura do Sistema
 
-Defina **o que** seu agente faz e **como** ele funciona:
+O fluxo de dados foi desenhado para garantir que o agente sempre tenha o contexto mais atualizado do cliente:
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
-
----
-
-### 2. Base de Conhecimento
-
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
-
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
-
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
-
----
-
-### 4. Aplicação Funcional
-
-Desenvolva um **protótipo funcional** do seu agente:
-
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
-
----
-
-### 6. Pitch
-
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
-
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
-
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
-
----
-
-## Estrutura do Repositório
+```mermaid
+flowchart TD
+    A[Usuário] --> B["Streamlit (Interface Visual)"]
+    B --> C[StherAgent - Lógica Python]
+    C --> D[Base de Conhecimento - JSON/CSV]
+    D --> C
+    C --> E[LLM - Llama3 via Ollama]
+    E --> F[Resposta Empática e Personalizada]
 
 ```
-📁 lab-agente-financeiro/
-│
-├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+
+## 📂 Estrutura da Base de Conhecimento
+
+O agente consome dados estruturados para personalizar o atendimento:
+
+* `perfil_investidor.json`: Contém o momento financeiro e metas do usuário.
+* `dividas.json`: Lista credores, taxas de juros e vencimentos.
+* `financeiro_2026.csv`: Histórico detalhado de receitas e despesas.
+* `produtos_financeiros.json`: Catálogo de investimentos para fins educativos.
+
+## 🛡️ Segurança e Anti-Alucinação
+
+Para atuar no setor financeiro, a Sther segue diretrizes rígidas de segurança:
+
+* **Foco em Dados Reais**: O sistema só utiliza informações contidas nos arquivos de contexto fornecidos.
+* **Limites de Atuação**: O agente é proibido de recomendar ativos específicos (ex: ações) ou pedir senhas e dados sensíveis.
+* **Transparência**: Caso uma informação não conste na base, o agente admite o desconhecimento em vez de inventar dados.
+
+## 🚀 Como Executar o Projeto
+
+1. **Instale o Ollama** e baixe o modelo Llama3:
+```bash
+ollama pull llama3
+
 ```
+
+
+2. **Instale as dependências**:
+```bash
+pip install -r src/requirements.txt
+
+```
+
+
+3. **Inicie a aplicação**:
+```bash
+cd src
+streamlit run app.py
+
+```
+
+
 
 ---
 
-## Dicas Finais
-
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+*Este projeto foi desenvolvido como parte do desafio de Agentes Financeiros com IA Generativa.*
