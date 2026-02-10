@@ -30,22 +30,22 @@ Crie testes simples para validar seu agente:
 ### Teste 1: Consulta de gastos
 - **Pergunta:** "Quanto gastei com alimentação?"
 - **Resposta esperada:** Valor baseado no `transacoes.csv`
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 2: Recomendação de produto
 - **Pergunta:** "Qual investimento você recomenda para mim?"
 - **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
 - **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 - **Pergunta:** "Quanto rende o produto XYZ?"
 - **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ---
 
@@ -54,19 +54,21 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- A persona "Sther" demonstrou empatia e clareza, reduzindo a ansiedade financeira simulada.
+- O uso do contexto (dívidas e perfil) foi preciso, evitando recomendações genéricas e focando na quitação de dívidas.
+- O bloqueio de perguntas fora do escopo (ex: previsão do tempo) funcionou conforme as regras de segurança do System Prompt.
+- As explicações sobre métodos de quitação (Bola de Neve vs Juros Altos) foram didáticas e acessíveis.
 
 **O que pode melhorar:**
-- [Liste aqui]
+- A granularidade da análise de gastos poderia ser maior se o CSV tivesse mais detalhes sobre subcategorias.
+- O agente poderia sugerir proativamente a criação de uma reserva de emergência antes de falar de investimentos, reforçando a segurança financeira.
+- A detecção de intenção poderia ser refinada para quando o usuário mistura múltiplos assuntos na mesma frase.
 
 ---
 
-## Métricas Avançadas (Opcional)
+## Conclusão
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
+Agora que vocês avaliou seus agente, vamos ver como ele pode melhorar.
 
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
-
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+> [!TIP]
+> Se quiser, use as perguntas e respostas da pasta `data` para criar um agente melhor!

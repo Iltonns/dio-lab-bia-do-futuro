@@ -35,5 +35,6 @@ ollama pull llama3
 pip install -r requirements.txt
 
 # Rodar a aplicação
+cd src
 streamlit run app.py
 ```
